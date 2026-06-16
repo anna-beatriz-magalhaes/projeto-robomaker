@@ -1,134 +1,305 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RoboMaker Kits Educacionais</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background:#f4f7fa;
+    color:#333;
+    line-height:1.6;
+}
+
+/* Header */
+header{
+    background:linear-gradient(135deg,#0f172a,#2563eb);
+    color:white;
+    padding:20px 8%;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+#logo{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#facc15;
+}
+
+/* Seções */
+section{
+    padding:60px 8%;
+}
+
+h2{
+    margin-bottom:20px;
+    color:#1e3a8a;
+}
+
+/* Categorias */
+#categorias ul{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+#categorias li{
+    list-style:none;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+#categorias li:hover{
+    transform:translateY(-5px);
+}
+
+/* Produtos */
+#produtos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+article{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+article:hover{
+    transform:translateY(-8px);
+}
+
+article img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+article h3{
+    padding:15px;
+    color:#1e40af;
+}
+
+article p{
+    padding:0 15px 15px;
+}
+
+article strong{
+    display:block;
+    padding:15px;
+    color:#16a34a;
+    font-size:1.2rem;
+}
+
+/* Cursos */
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+thead{
+    background:#2563eb;
+    color:white;
+}
+
+th, td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+tbody tr:hover{
+    background:#f1f5f9;
+}
+
+/* Footer */
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+footer img{
+    width:80px;
+    margin:15px;
+    border-radius:50%;
+    transition:.3s;
+}
+
+footer img:hover{
+    transform:scale(1.1);
+}
+
+footer p{
+    margin-top:15px;
+}
+
+/* Responsivo */
+@media(max-width:768px){
+
+    #logo{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <div id="logo">
+        <h1>🤖 RoboMaker Kits Educacionais</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#categorias">Categorias</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<section id="categorias">
+    <h2>Nossas Categorias</h2>
+
+    <ul>
+        <li>🔧 Placas Microcontroladas</li>
+        <li>📡 Sensores</li>
+        <li>⚙️ Motores e Servos</li>
+        <li>🛠 Estruturas de Montagem</li>
+    </ul>
+</section>
+
+<section id="produtos">
+
+    <article>
+        <img src="https://plus.unsplash.com/premium_photo-1681426669771-d2113672a49b" alt="Microcontrolador">
+        <h3>Placa Microcontroladora</h3>
+        <p>
+            Ideal para estudantes, makers e hobbyistas. Possui documentação completa e suporte da comunidade open-source.
+        </p>
+        <strong>R$ 95,00</strong>
+    </article>
+
+    <article>
+        <img src="https://images.unsplash.com/photo-1640955785023-1854685dae05" alt="Sensor">
+        <h3>Sensor Inteligente</h3>
+        <p>
+            Alta precisão e estabilidade para projetos de automação, monitoramento e robótica educacional.
+        </p>
+        <strong>R$ 35,00</strong>
+    </article>
+
+    <article>
+        <img src="https://images.unsplash.com/photo-1723730741647-caaea47ac90f" alt="Motores">
+        <h3>Motores e Servos</h3>
+        <p>
+            Controle preciso de posição e velocidade para projetos de robótica e engenharia.
+        </p>
+        <strong>R$ 6.000,00</strong>
+    </article>
+
+</section>
+
+<section id="cursos">
+    <h2>Oficinas Presenciais</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Curso</th>
+                <th>Duração</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Inglês</td>
+                <td>60 min</td>
+                <td>R$ 250,00</td>
+            </tr>
+
+            <tr>
+                <td>Graduação em Administração</td>
+                <td>3h</td>
+                <td>R$ 300,00</td>
+            </tr>
+
+            <tr>
+                <td>Técnico em Informática</td>
+                <td>3h</td>
+                <td>R$ 240,00</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+</main>
+
+<footer>
+    <h2>🤖 RoboMaker Educacional</h2>
+
+    <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0" alt="Instagram">
+    <img src="https://images.unsplash.com/photo-1662070479020-73f77887c87c" alt="Facebook">
+
+    <p>© 2026 RoboMaker - Desenvolvido por Anna Beatriz</p>
+</footer>
+
+</body>
+</html>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-   </head>
-<body>
-    <header>
-        <div id="logo">
-            <h1>RoboMaker Kits Educacionais</h1>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#categorias">Categorias</a>
-                    </li>
-                    <li>
-                        <a href="#produtos">Produtos</a>
-                    </li>
-                    <li>
-                        <a href="#cursos">Cursos</a>
-                    </li>
-                    <li>
-                        <a href="cadastro.html">Cadastro</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!--  Seção de Categorias-->
-    <main>
-        <section id="categorias">
-            <h2>Nossas Categorias</h2>
-                <ul>
-                <li>
-                    Placas Microcontroladas
-                </li>
-                <li>
-                    Sensores
-                </li>
-                <li>
-                    Motores e Servos
-                </li>
-                <li>
-                    Estruturas de Montagem
-                </li>
-            </ul>
-        </section>
-
-        <!-- Seção de Produto-->
-    <section id="produtos">
-        <article>
-            <h3>RoboMaker Kits Educacionais</h3>
-            <img src="https://plus.unsplash.com/premium_photo-1681426669771-d2113672a49b?" 
-            alt="Placa Microcontroladora"
-            width="600"
-            >
-            <p>
-                Projetada para makers, estudantes e hobbyistas, oferece pinagem versátil, documentação completa e suporte à comunidade open-source, sendo a base perfeita para aprender, testar e evoluir seus projetos embarcados.
-            </p>
-            <strong> R$95,00</strong>
-        </article>
-        <article>
-            <h3>Robomaker kits educacionais</h3>
-            <img src="https://images.unsplash.com/photo-1640955785023-1854685dae05?" 
-            alt="Sensores"
-            width="600"
-            >
-            <p>
-                Com calibração de fábrica e estabilidade comprovada, este sensor entrega dados consistentes mesmo em condições variáveis, sendo a escolha ideal para aplicações que exigem exatidão e baixo índice de falhas.
-            </p>
-            <strong>R$35,00</strong>
-        </article>
-        <article>
-            <h3>Robomaker kits educacionais</h3>
-            <img src="https://images.unsplash.com/photo-1723730741647-caaea47ac90f?" 
-            alt="Motores e Servos"
-            width="600"
-            >,
-            <p>
-                Motores e servos com controle preciso de posição e velocidade, projetados para integração direta com microcontroladores, garantindo torque confiável e resposta ágil para robótica, automação e projetos de engenharia.
-            </p>
-            <strong>R$6.000</strong>
-        </article>
-    </section>
-
-    <section id="cursos">
-  <h2>Oficinas Presenciais</h2>
-  <table border="1">
-    <thead>
-        <tr>
-            <th>Cursos</th>
-            <th>Duração</th>
-            <th>Valor</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Ingês</td>
-            <td>60M</td>
-            <td>250,00</td>
-        </tr>
-
-        <tr>
-            <td>Graduação em Administração</td>
-            <td>3H</td>
-            <td>300,00</td>
-        </tr>
-
-        <tr>
-            <td>Técnico em Informática</td>
-            <td>3H</td>
-            <td>240,00</td>
-        </tr>
-    </tbody>
-  </table>
-    </section>
-    </main>
-
-    <!--Rondapé-->
-  <footer>
-    <h2> RoboMaker educacional</h2>
-    <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?" alt="Logo instagram" width="300"> 
-    <img src="https://images.unsplash.com/photo-1662070479020-73f77887c87c?" alt="Logo facebook"  width="300">
-    <p>
-        Copyright &copy; 2026 robomaker desenvolvido por Anna Beatriz
-    </p>
-  </footer>
-  
+    
 </body>
 </html>
